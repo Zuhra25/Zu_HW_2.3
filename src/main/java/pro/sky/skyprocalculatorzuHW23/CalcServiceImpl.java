@@ -9,24 +9,20 @@ public class CalcServiceImpl implements CalcService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String plus(int arg1, int arg2) {
-        return String.format("%d + %d = %d", arg1, arg2, arg1 + arg2);
+    public int plus(int arg1, int arg2) {
+        return arg1 + arg2;
     }
 
-    public String minus(int arg1, int arg2) {
-        return String.format("%d - %d = %d", arg1, arg2, arg1 - arg2);
+    public int minus(int arg1, int arg2) {
+        return arg1 - arg2;
     }
 
-    public String multiply(int arg1, int arg2) {
-        return String.format("%d * %d = %d", arg1, arg2, arg1 * arg2);
+    public int multiply(int arg1, int arg2) {
+        return arg1 * arg2;
     }
 
-    public String divide(int arg1, int arg2) {
-        if (arg2 == 0) {
-            return String.format("Делить на ноль нельзя!!!");
-        } else {
-            return String.format("%d / %d = %.1f", arg1, arg2, (double) arg1 / arg2);
-        }
+    public double divide(int arg1, int arg2) {
+            return (double) arg1 / arg2;
     }
 
 }
